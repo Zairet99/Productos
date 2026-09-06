@@ -1,10 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-# Guardar el script completo en un archivo .py local
-script_code = """import requests
-from bs4 import BeautifulSoup
-import pandas as pd
 
 url = "https://scrapepark.org/spanish/"
 response = requests.get(url)
@@ -33,7 +29,3 @@ for producto in productos:
 df = pd.DataFrame(datos)
 df.to_csv("patinetas_scrapepark.csv", index=False)
 print("Scraping exitoso y archivo patinetas_scrapepark.csv creado.")
-"""
-
-with open("texto.py", "w", encoding="utf-8") as f:
-    f.write(script_code)
